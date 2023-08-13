@@ -9,7 +9,7 @@ namespace R5T.F0112
         public static IDirectoryNames DirectoryNames => F0112.DirectoryNames.Instance;
         public static IDirectoryPathOperator DirectoryPathOperator => F0112.DirectoryPathOperator.Instance;
         public static F0000.IEnumerableOperator EnumerableOperator => F0000.EnumerableOperator.Instance;
-        public static Z0010.IFileExtensions FileExtensions => Z0010.FileExtensions.Instance;
+        public static Z0044.Z000.Raw.IFileExtensions FileExtensions => Z0044.Z000.Raw.FileExtensions.Instance;
         public static IFileNames FileNames => F0112.FileNames.Instance;
         public static IFileSystemOperator FileSystemOperator => F0112.FileSystemOperator.Instance;
         public static F0000.IFileOperator FileOperator => F0000.FileOperator.Instance;

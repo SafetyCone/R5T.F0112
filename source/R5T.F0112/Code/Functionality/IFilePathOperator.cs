@@ -34,7 +34,7 @@ namespace R5T.F0112
 
             var outputAssemblyFileName = F0000.FileNameOperator.Instance.GetFileName(
                 projectName,
-                Instances.FileExtensions.Dll);
+                Instances.FileExtensions.dll.Value);
 
             var assemblyFilePath = Instances.PathOperator.GetFilePath(
                 publishDirectoryPath,
@@ -60,7 +60,7 @@ namespace R5T.F0112
 
             var outputAssemblyFileName = F0000.FileNameOperator.Instance.GetFileName(
                 projectName,
-                Instances.FileExtensions.Dll);
+                Instances.FileExtensions.dll.Value);
 
             var assemblyFilePath = Instances.PathOperator.GetFilePath(
                 frameworkDirectoryPath,
