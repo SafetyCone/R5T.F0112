@@ -32,7 +32,7 @@ namespace R5T.F0112
 
             var projectName = Instances.ProjectPathsOperator.GetProjectName(projectFilePath);
 
-            var outputAssemblyFileName = F0000.FileNameOperator.Instance.GetFileName(
+            var outputAssemblyFileName = F0000.FileNameOperator.Instance.Get_FileName(
                 projectName,
                 Instances.FileExtensions.dll.Value);
 
@@ -58,7 +58,7 @@ namespace R5T.F0112
 
             var projectName = Instances.ProjectPathsOperator.GetProjectName(projectFilePath);
 
-            var outputAssemblyFileName = F0000.FileNameOperator.Instance.GetFileName(
+            var outputAssemblyFileName = F0000.FileNameOperator.Instance.Get_FileName(
                 projectName,
                 Instances.FileExtensions.dll.Value);
 
