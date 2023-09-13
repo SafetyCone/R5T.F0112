@@ -137,7 +137,7 @@ namespace R5T.F0112
                 buildProblemTextsByProjectFilePath);
 
             // Write build problem projects file.
-            await Instances.FileOperator.WriteLines(
+            await Instances.FileOperator.Write_Lines(
                 buildProblemProjectsFilePath,
                 buildProblemTextsByProjectFilePath.Keys
                     .OrderAlphabetically());
