@@ -14,7 +14,7 @@ namespace R5T.F0112
         {
             var buildJsonFilePath = Instances.FilePathOperator.Get_BuildJsonFilePath(projectFilePath);
 
-            var buildJsonFileExists = this.FileExists(buildJsonFilePath);
+            var buildJsonFileExists = this.Exists_File(buildJsonFilePath);
             return buildJsonFileExists;
         }
 
@@ -24,7 +24,7 @@ namespace R5T.F0112
             // Test for the default output assembly file path.
             var assemblyFilePath = Instances.FilePathOperator.Get_PublishDirectoryOutputAssemblyFilePath(projectFilePath);
 
-            var outputAssemblyExists = this.FileExists(assemblyFilePath);
+            var outputAssemblyExists = this.Exists_File(assemblyFilePath);
             if (outputAssemblyExists)
             {
                 return true;
@@ -33,7 +33,7 @@ namespace R5T.F0112
             // Otherwise, test for the Blazor WebAssembly output file path.
             var blazorWebAssemblyFilePath = Instances.FilePathOperator.Get_PublishWwwRootFrameworkDirectoryOutputAssemblyFilePath(projectFilePath);
 
-            var blazorWebAssemblyFileExists = this.FileExists(blazorWebAssemblyFilePath);
+            var blazorWebAssemblyFileExists = this.Exists_File(blazorWebAssemblyFilePath);
             return blazorWebAssemblyFileExists;
         }
     }

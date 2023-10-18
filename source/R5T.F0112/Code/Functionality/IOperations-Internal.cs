@@ -109,7 +109,7 @@ namespace R5T.F0112.Internal
 
             var buildJsonFilePath = Instances.FilePathOperator.Get_BuildJsonFilePath_FromPublishDirectory(publishDirectoryPath);
 
-            var buildJsonFileExists = Instances.FileSystemOperator.FileExists(buildJsonFilePath);
+            var buildJsonFileExists = Instances.FileSystemOperator.Exists_File(buildJsonFilePath);
             if (buildJsonFileExists)
             {
                 var buildResult = Instances.JsonOperator.Deserialize_Synchronous<BuildResult>(
