@@ -59,7 +59,7 @@ namespace R5T.F0112
                 textOutput.WriteWarning_WithPause($"Failed to build project:\n\t{projectFilePath}");
 
                 // Combine aggregate exception messages to text.
-                var buildProblemText = Instances.TextOperator.JoinLines(
+                var buildProblemText = Instances.TextOperator.Join_Lines(
                     aggregateException.InnerExceptions
                         .Select(exception => exception.Message));
 
