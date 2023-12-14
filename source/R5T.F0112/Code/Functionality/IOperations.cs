@@ -70,7 +70,7 @@ namespace R5T.F0112
 
             // Output an S0041-specific file (R5T.S0041.Build.json) containing build time to publish directory.
             // Output this regardless of build success so that projects are not rebuilt in either case until project files change.
-            var buildTime = Instances.NowOperator.GetNow_Local();
+            var buildTime = Instances.NowOperator.Get_Now_Local();
 
             var buildResult = new BuildResult
             {
