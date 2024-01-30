@@ -18,7 +18,7 @@ namespace R5T.F0112
 
         public string Get_BuildJsonFilePath_FromPublishDirectory(string publishDirectoryPath)
         {
-            var buildJsonFilePath = Instances.PathOperator.GetFilePath(
+            var buildJsonFilePath = Instances.PathOperator.Get_FilePath(
                 publishDirectoryPath,
                 FileNames.Instance.BuildJsonFileName);
 
@@ -36,7 +36,7 @@ namespace R5T.F0112
                 projectName,
                 Instances.FileExtensions.dll.Value);
 
-            var assemblyFilePath = Instances.PathOperator.GetFilePath(
+            var assemblyFilePath = Instances.PathOperator.Get_FilePath(
                 publishDirectoryPath,
                 outputAssemblyFileName);
 
@@ -48,11 +48,11 @@ namespace R5T.F0112
         {
             var publishDirectoryPath = Instances.DirectoryPathOperator.GetPublishDirectoryPath_ForProjectFilePath(projectFilePath);
 
-            var wwwRootDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+            var wwwRootDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
                 publishDirectoryPath,
                 Instances.DirectoryNames.WwwRoot);
 
-            var frameworkDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+            var frameworkDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
                 wwwRootDirectoryPath,
                 Instances.DirectoryNames.Framework);
 
@@ -62,7 +62,7 @@ namespace R5T.F0112
                 projectName,
                 Instances.FileExtensions.dll.Value);
 
-            var assemblyFilePath = Instances.PathOperator.GetFilePath(
+            var assemblyFilePath = Instances.PathOperator.Get_FilePath(
                 frameworkDirectoryPath,
                 outputAssemblyFileName);
 

@@ -12,7 +12,7 @@ namespace R5T.F0112
         {
             var projectDirectoryPath = Instances.ProjectPathsOperator.GetProjectDirectoryPath(projectFilePath);
 
-            var publishDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+            var publishDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
                 projectDirectoryPath,
                 Instances.DirectoryNames.bin,
                 Instances.DirectoryNames.Publish);
