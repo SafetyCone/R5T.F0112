@@ -27,9 +27,10 @@ namespace R5T.F0112
 
             Instances.FileSystemOperator.ClearDirectory_Synchronous(publishDirectoryPath);
 
-            // Publishing as a self-contained application solves the issue with framework assemblies not being available (for example, ASP.NET Core framework assemblies not being available from .NET Core).
+            // Publishing as a self-contained application solves the issue with framework assemblies not being available
+            // (for example, ASP.NET Core framework assemblies not being available from .NET Core).
             // But! At the cost of tremendous hard disk space (~100MB for each target).
-            //Instances.DotnetPublishOperator.Publish_WithRuntimeArgument(
+            // Instances.DotnetPublishOperator.Publish_WithRuntimeArgument(
             //    projectFilePath,
             //    publishDirectoryPath);
 

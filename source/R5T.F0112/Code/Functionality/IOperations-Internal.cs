@@ -101,7 +101,7 @@ namespace R5T.F0112.Internal
             // Check latest file write time in project directory against build time in publish directory (R5T.S0041.Build.json).
             var projectDirectoryPath = Instances.ProjectPathsOperator.GetProjectDirectoryPath(projectFilePath);
 
-            var projectFilesLastModifiedTime = F0000.FileSystemOperator.Instance.GetLastModifiedTime_ForDirectory_Local(
+            var projectFilesLastModifiedTime = Instances.FileSystemOperator.GetLastModifiedTime_ForDirectory_Local(
                 projectDirectoryPath,
                 Instances.DirectoryNameOperator.IsNotBinariesOrObjectsDirectory);
 

@@ -8,6 +8,12 @@ namespace R5T.F0112
     [FunctionalityMarker]
     public partial interface IFilePathOperator : IFunctionalityMarker
     {
+        /// <summary>
+        /// Gets the publish directory path for the project file path
+        /// (which is complicated),
+        /// then calls <see cref="Get_BuildJsonFilePath_FromPublishDirectory(string)"/>, which:
+        /// <para><inheritdoc cref="Get_BuildJsonFilePath_FromPublishDirectory(string)" path="/summary"/></para>
+        /// </summary>
         public string Get_BuildJsonFilePath(string projectFilePath)
         {
             var publishDirectoryPath = Instances.DirectoryPathOperator.GetPublishDirectoryPath_ForProjectFilePath(projectFilePath);
@@ -16,11 +22,14 @@ namespace R5T.F0112
             return buildJsonFilePath;
         }
 
+        /// <summary>
+        /// Appends the <see cref="IFileNames.BuildJsonFileName"/> (<inheritdoc cref="IFileNames.BuildJsonFileName" path="descendant::value"/>) to the publish directory path.
+        /// </summary>
         public string Get_BuildJsonFilePath_FromPublishDirectory(string publishDirectoryPath)
         {
             var buildJsonFilePath = Instances.PathOperator.Get_FilePath(
                 publishDirectoryPath,
-                FileNames.Instance.BuildJsonFileName);
+                Instances.FileNames.BuildJsonFileName);
 
             return buildJsonFilePath;
         }
@@ -32,9 +41,9 @@ namespace R5T.F0112
 
             var projectName = Instances.ProjectPathsOperator.GetProjectName(projectFilePath);
 
-            var outputAssemblyFileName = F0000.FileNameOperator.Instance.Get_FileName(
+            var outputAssemblyFileName = Instances.FileNameOperator.Get_FileName(
                 projectName,
-                Instances.FileExtensions.dll.Value);
+                Instances.FileExtensions.dll);
 
             var assemblyFilePath = Instances.PathOperator.Get_FilePath(
                 publishDirectoryPath,
@@ -58,9 +67,9 @@ namespace R5T.F0112
 
             var projectName = Instances.ProjectPathsOperator.GetProjectName(projectFilePath);
 
-            var outputAssemblyFileName = F0000.FileNameOperator.Instance.Get_FileName(
+            var outputAssemblyFileName = Instances.FileNameOperator.Get_FileName(
                 projectName,
-                Instances.FileExtensions.dll.Value);
+                Instances.FileExtensions.dll);
 
             var assemblyFilePath = Instances.PathOperator.Get_FilePath(
                 frameworkDirectoryPath,
