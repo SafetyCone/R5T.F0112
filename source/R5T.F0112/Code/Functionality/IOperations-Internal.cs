@@ -158,7 +158,7 @@ namespace R5T.F0112.Internal
                 problemProjectsFilePath,
                 Instances.EnumerableOperator.From($"Problem Projects, Count: {problemProjects.Count}\n\n")
                     .Append(problemProjects
-                        .OrderAlphabetically(pair => pair.Key)
+                        .OrderAlphabeticallyBy(pair => pair.Key)
                         .SelectMany(pair => Instances.EnumerableOperator.From($"{pair.Key}:")
                             .Append(pair.Value)
                             .Append("***\n"))));
